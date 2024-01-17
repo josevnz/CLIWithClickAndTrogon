@@ -335,6 +335,8 @@ Allow me to demonstrate now with the tui mode the auto discoverable mode:
 
 [![asciicast](https://asciinema.org/a/590897.svg)](https://asciinema.org/a/590897)
 
+Nice! We got a TUI where some options are automatically populated for us, it gives us a clear idea how to use the programs without knowing too much about them.
+
 ## What is next
 
 1. _Download_ the [source code](https://github.com/josevnz/CLIWithClickAndTrogon) for this tutorial and start experimenting.
