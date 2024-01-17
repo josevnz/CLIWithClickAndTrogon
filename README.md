@@ -1,5 +1,9 @@
 # TUI applications with Click and Trogon
 
+Linux and terminal applications are almost synonymous. If you have used applications like grep, cat, sed, AWK those are command line interfaces (CLI) and when they work together they allow you to unleash the power of your computer by mixing and matching a few commands.
+Some times CLI get too complex and that's when they can get complemented with more exploratory versions of the programs called text user interfaces (TUI). TUI like HTOP, glances, Midnight commander and others allow you to mix the power of the CLI without sacrificing the ease of use.
+So what to do when your Python CLI gets lots of options and becomes intimidating to the user? Wouldn't be nice if you could have a way to 'self' discover the app and once you are familiar with it, perform your task quickly using the options supported by the script? 
+
 Python has a very [healthy ecosystem of GUI and TUI frameworks](https://github.com/josevnz/rpm_query/blob/main/Writting%20UI%20applications%20that%20can%20query%20the%20RPM%20database%20with%20Python.md) that you can use to write nice looking and 
 intuitive applications. On this tutorial I will show you another 2 that can help you with to solve the following 2 problems:
 
@@ -196,7 +200,7 @@ console_scripts =
     rpmq = reporter.scripts:command
 ```
 
-Then we create a package called 'scripts' inside the package called 'reporter' with the CLI logic using click:
+Then we create a package called 'scripts' inside the package called 'reporter' with the CLI logic using click.
 
 [setuptools will generate a script called 'rpmq'](https://setuptools.pypa.io/en/latest/userguide/entry_point.html) for us that behaves exactly as the previous script, but again no boilerplate
 code to pass arguments to click is needed:
@@ -219,7 +223,7 @@ kernel-6.2.14: 0
 kernel-6.2.15: 0
 ```
 
-## Making your TUI discoverable with Trogon
+## Making your CLI discoverable with Trogon
 
 Let's solve the problem of making a CLI discoverable with Trogon. Besides adding the new _trogon_ library as part of the requirements ([requirements.txt](requirements.txt) and [setup.cfg](setup.cfg) we need to add a new decorator to our CLI:
 
