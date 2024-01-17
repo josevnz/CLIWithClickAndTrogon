@@ -1,11 +1,13 @@
 # TUI applications with Click and Trogon
 
-Linux and terminal applications are almost synonymous. If you have used applications like grep, cat, sed, AWK those are command line interfaces (CLI) and when they work together they allow you to unleash the power of your computer by mixing and matching a few commands.
-Some times CLI get too complex and that's when they can get complemented with more exploratory versions of the programs called text user interfaces (TUI). TUI like HTOP, glances, Midnight commander and others allow you to mix the power of the CLI without sacrificing the ease of use.
+Linux and terminal applications are almost synonymous. If you have used applications like grep, cat, sed, AWK those are command line interfaces ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)) and when they work together they allow you to unleash the power of your computer by mixing and matching a few commands.
+Some times CLI get too complex and that's when they can get complemented with more exploratory versions of the programs called text user interfaces ([TUI](https://en.wikipedia.org/wiki/Text-based_user_interface)). TUI like HTOP, glances, Midnight commander and others allow you to mix the power of the CLI without sacrificing the ease of use.
 So what to do when your Python CLI gets lots of options and becomes intimidating to the user? Wouldn't be nice if you could have a way to 'self' discover the app and once you are familiar with it, perform your task quickly using the options supported by the script? 
 
 Python has a very [healthy ecosystem of GUI and TUI frameworks](https://github.com/josevnz/rpm_query/blob/main/Writting%20UI%20applications%20that%20can%20query%20the%20RPM%20database%20with%20Python.md) that you can use to write nice looking and 
-intuitive applications. On this tutorial I will show you another 2 that can help you with to solve the following 2 problems:
+intuitive applications. 
+
+I'll show you two of them that can help you solve the following two problems::
 
 1. Avoid overwhelm complex and intimidating API when writing applications. Will use [Click](https://palletsprojects.com/p/click/) to solve that problem.
 2. Allow discoverability. This is very important when you have an application that supports many options or that you haven't used in a while. That is where [Trogon](https://github.com/Textualize/trogon) comes handy. 
@@ -16,7 +18,7 @@ system [RPM database](https://en.wikipedia.org/wiki/RPM_Package_Manager#Local_op
 ## What do you need for this tutorial
 
 1. Linux's distribution, preferably one that uses RPM (Like Fedora or RedHat enterprise Linux)
-2. Python 3.7_
+2. Python 3.8+
 3. Git
 4. Familiarity with virtual environments
 5. An Internet connection so you can download dependencies
@@ -99,7 +101,7 @@ kernel-6.2.15: 0
 
 So it seems than most of the code on the [rpmq_simple.py](scripts/rpmq_simple.py) script is boilerplate for the command line interface, using the standard '[ArgParse](https://docs.python.org/3/library/argparse.html)' library.
 
-ArgParse is [powerful](https://docs.python.org/3/howto/argparse.html#argparse-tutorial), but it is also intimidating at first.
+ArgParse is [powerful](https://docs.python.org/3/howto/argparse.html#argparse-tutorial), but it is also intimidating at first, specially when you have to support multiple use cases.
 
 ## A new way to process the CLI with Click
 
@@ -164,7 +166,7 @@ kernel-6.2.15: 0
 
 ## Using setuptools and Click
 
-The Click [documentation mention](https://click.palletsprojects.com/en/8.1.x/setuptools/#setuptools-integration) that we should use setuptools to create a wrapper for our tool, automatically.
+The Click [documentation mention](https://click.palletsprojects.com/en/8.1.x/setuptools/#setuptools-integration) that we should use [setuptools](https://setuptools.pypa.io/en/latest/setuptools.html) to create a wrapper for our tool, automatically.
 
 The documentation has the deprecated syntax for setup.py, but we will use the new setup.cfg format instead:
 
