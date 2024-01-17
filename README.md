@@ -1,4 +1,4 @@
-# TUI applications with Click and Trogon
+# How to Use TUI Applications with Click and Trogon - Linux Tutorial
 
 Linux and terminal applications are almost synonymous. If you have used applications like grep, cat, sed, AWK those are command line interfaces ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)) and when they work together they allow you to unleash the power of your computer by mixing and matching a few commands.
 Some times CLI get too complex and that's when they can get complemented with more exploratory versions of the programs called text user interfaces ([TUI](https://en.wikipedia.org/wiki/Text-based_user_interface)). TUI like HTOP, glances, Midnight commander and others allow you to mix the power of the CLI without sacrificing the ease of use.
